@@ -1,0 +1,324 @@
+% Use only LaTeX2e, calling the article.cls class and 12-point type.
+
+\documentclass[12pt]{article}
+
+% Users of the {thebibliography} environment or BibTeX should use the
+% scicite.sty package, downloadable from *Science* at
+% www.sciencemag.org/about/authors/prep/TeX_help/ .
+% This package should properly format in-text
+% reference calls and reference-list numbers.
+
+\usepackage{amsmath}
+\usepackage{float}
+
+% Use times if you have the font installed; otherwise, comment out the
+% following line.
+
+\usepackage{times}
+\usepackage{graphicx}
+\usepackage[font=footnotesize,labelfont=bf]{caption}
+
+% The preamble here sets up a lot of new/revised commands and
+% environments.  It's annoying, but please do *not* try to strip these
+% out into a separate .sty file (which could lead to the loss of some
+% information when we convert the file to other formats).  Instead, keep
+% them in the preamble of your main LaTeX source file.
+
+
+% The following parameters seem to provide a reasonable page setup.
+
+\topmargin 0.0cm
+\oddsidemargin 0.2cm
+\textwidth 16cm 
+\textheight 21cm
+\footskip 1.0cm
+
+
+%The next command sets up an environment for the abstract to your paper.
+
+\newenvironment{sciabstract}{%
+\begin{quote} \bf}
+{\end{quote}}
+
+
+% If your reference list includes text notes as well as references,
+% include the following line; otherwise, comment it out.
+
+\renewcommand\refname{References and Notes}
+
+% The following lines set up an environment for the last note in the
+% reference list, which commonly includes acknowledgments of funding,
+% help, etc.  It's intended for users of BibTeX or the {thebibliography}
+% environment.  Users who are hand-coding their references at the end
+% using a list environment such as {enumerate} can simply add another
+% item at the end, and it will be numbered automatically.
+
+\newcounter{lastnote}
+\newenvironment{scilastnote}{%
+\setcounter{lastnote}{\value{enumiv}}%
+\addtocounter{lastnote}{+1}%
+\begin{list}%
+{\arabic{lastnote}.}
+{\setlength{\leftmargin}{.22in}}
+{\setlength{\labelsep}{.5em}}}
+{\end{list}}
+\pagenumbering{gobble}
+
+% Include your paper's title here
+
+\title{Notes on ``The Circumgalactic Medium'' by Tumlinson, Peeples, and Werk} 
+
+
+\author{CJ Llorente}
+
+%\date{}
+%%%%%%%%%%%%%%%%% END OF PREAMBLE %%%%%%%%%%%%%%%%
+
+
+
+\begin{document} 
+
+\baselineskip12pt
+
+% Make the title.
+
+\maketitle 
+
+
+\setcounter{figure}{0}
+
+The circumgalactic medium (CGM) is the gas that surrounds galaxies. It exists outside the galactic disk and inside the virial radius, i.e. it is gravitationally bound to the galaxy even if it exists outside of it. The CGM is diffuse and nearly invisible. It acts a source for star-forming fuel and a regulator of the galactic gas supply. It plays a significant role in galactic evolution.
+
+\section{Brief History}
+NaI and CaII absorption lines in the spectra of stars and quasars were the first basis of evidence for extraplanar galactic gas.
+
+\section{Galaxies in Gaseous Halos}
+
+\subsection{The Major Problems of Galaxy Evolution}
+
+Why does dark matter halo mass affect the star formation and chemical evolution of galaxies?
+Why are there lower than expected baryon/metal quantities in galaxies?
+These questions regard the flow of gas into and out of a galaxy, which naturally pass through the CGM.
+
+\subsection{How do galaxies sustain star formation}
+ISM gas can only last for a fraction of the time during star formation, implying an external supply of gas.
+
+The depletion time $\tau_{dep}$ is given by 
+$$
+\tau_{dep} = \frac{M_{gas}}{\dot M_{sfr}}
+$$
+
+L* refers to the Schechter luminosity. Galaxies above this luminosity exhibit very different properties than those below it. 
+
+Sub L* galaxies experience short bursts of star formation rather than the continuous star formation of higher mass galaxies. This suggests a difference in where they get their external fuel from. 
+
+\subsection{What quenches galaxies and what keeps them that way}
+Quenching is the process by which a galaxy's star formation stops. Quenching occurs much more quickly than we predict it should, i.e. before a galaxy uses up its reservoir of cold gas. There should therefore be another mechanism that causes galaxy quenching. 
+
+One of the largest unsolved problems in galaxy formation is how galaxies become passive and how they stay that way. Models will either shut off ISM accretion or keep the CGM too hot to cool and fall into the ISM.
+
+Low mass galaxies tend to keep forming stars unless they are a satellite of a larger galaxy, implying that the larger galaxy steals fuel from the smaller one. This is testable.
+
+\subsection{Why do galaxies lack their fair share of baryons}
+Even the most efficient L* galaxies have only converted 20\% of their baryons into stars
+
+There are three obvious possibilities
+\begin{itemize}
+\item{The baryons are there, but we haven't detected them}
+\item{Baryons accreted into the halo and were later ejected}
+\item{Baryons never accreted onto the halo in the first place}
+\end{itemize}
+
+Given that the most likely situation is some combination of these three, the missing baryons are likely to be found in the CGM.
+
+\subsection{Where are the metals?}
+Baryons come from outside the halo, but metals are sourced locally from stars. Star-forming galaxies only retain about 20-25\% of the metals they produce. Clearly metals are lost to outflows, but how these outflows scale with galaxy mass is unknown. 
+
+\section{How we study the CGM}
+
+\subsection{Transverse Absorption Line Studies}
+Viewing the CGM in abssorption against a bright background sources (quasar) offers three advantages over other methods
+\begin{itemize}
+\item{Sensitivity to extremely low column density, $N \simeq 10^{12}$ cm $^{-2}$}
+\item{Access to a wide range of densities (emission-line measures scale as density squared)}
+\item{Invariance of detection limits to redshift and the host galaxy's luminosity}
+\end{itemize}
+
+It also has a disadvantage in that it only provides projection measurements of density along a line of sight.
+For further reading on how the size of absorbers might be constrained
+\begin{itemize}
+\item{Lehner et al. 2015}
+\item{Bowen et al. 2016}
+\item{Rauch \& Haehnelt 2011}
+\item{Rubin et al. 2015}
+\end{itemize}
+
+Most observation is done in the UV and optical, although Chadra nad XMM-Newton have been used to search for X rays.
+(Nicastro et al. 2005)
+
+??? Look up an explanation of the Lyman limit system
+(Tumlinson et al. 2013, Johnson et al. 2014)
+
+\subsection{Stacking Analyses}
+A way to extract faint signals from absorption line data sets is ``stacking'' hundreds or thousands of spectra.
+This requires a catalog of redshifts for foreground galaxies or absorbers so that background objects can be shifted
+to their rest frames, continuum-normalized, and then co-added together.
+
+Stacking refers to the process of averaging these spectra together such that different effects due to differences
+in the galaxies are averaged out, and we can establish patters that are present in all galaxies. 
+
+Stacking can detect weak signals in the mean properties of gas absorbers but at the cost of averaging out
+kinematic and ionization structure that may contain significant physical meaning.
+
+\subsection{Down the Barrel}
+``Down-the-barrel'' spectroscopy uses a galaxy's own starlight as a background source for detecting absorption.
+Commonly used to study inflows and outflows from spectroscopy of star-forming galaxies at $z \sim 2-3$ in
+redshifted FUV, NUV, and optical.
+
+Has the limitation that the galactocentric radius of any detected absorbtion is unconstrained, i.e., it could
+be anywhere along the line of sight. This distorts mass and number density estimates.
+
+\subsection{Emission-Line Maps}
+
+Finding CGM photons is difficult due to the low number density. The Milky Way halo has been mapped for high-velocity
+clouds.
+
+Stacking techniques have yielded mass density profiles for hot gas around nearby galaxies. (Anderson et al. 2013)
+
+Emission maps can constrain the density profile, morphology, and physical extent of the gas more directly than
+aggregated pencil-beam sightlines. (Corlies \& Schiminiovich 2016)
+
+\subsection{Hydrodynamic Simulations}
+
+Simulations are essential! I feel so validated!
+They provide controlled environments where physical properties, histories, and futures are all well known
+and can be manipulated to tease out insights.
+
+Major methods include:
+\begin{itemize}
+\item{smoothed particle hydrodynamics, Gadget, Gasoline, and GIZMO}
+\item{adaptive mesh refinement, Enzo}
+    \item{moving mesh}
+\end{itemize}
+
+Large scale Mpc boxes can simulate hundreds of galaxies in $\Lambda$CDM environments.
+High-resolution simulations can focus on the interaction between dese clouds and diffuse halos at scales
+less than a parsec.
+Between these two scales are ``zoom simulations'' which resolve enough large-scale structure to accurately
+trace a single galaxy or subset of galaxies from a larger set. Zooms must make assumptions about physics
+that they do not resolve, using ``sub-grid'' prescriptions to stand in for complex phenomena such as star
+formation, metal mixing and transport, supernova, and AGN feedback.
+
+Subgrids are parameterized to yield specific metrics (the stellar mass function at $z=0$) and then
+the properties that emerge
+\begin{itemize}
+\item{Star Formation Rate}
+\item{morphology}
+\item{quenching}
+  \item{the CGM}
+\end{itemize}
+
+are analyzed and compared with data to contrain the physical parameters going in. 
+
+\section{The Physical State of the CGM}
+
+The physical state:
+\begin{itemize}
+\item{Density profile}
+\item{Phase Structure}
+\item{kinematics}
+\end{itemize}
+
+
+\subsection{The Complex Multiphase CGM}
+
+The ionization structure is multiphase. 
+
+
+Open Question: What does the observed multiphase ionization structure reveal about the small-scale multiphase density, temperature, and metallicity
+
+To produce an extended, multiphase, CGM, several scenarios have been proposed:
+
+\begin{itemize}
+\item{Massive inward cooling flows driven by local thermal instabilities}
+\item{Boundary layers between moving cool clouds in a hot atmosphere}
+\item{Continual shocking and mixing of diffuse halo gas by galactic outflows}
+\end{itemize}
+
+Evidence for a hot component ($T \geq 10^6$ K ) comes from diffuse soft X-ray emission and absorbtion along QSO sightlines. 
+
+Clouds show morphologies indicative of cool clouds moving through a hot medium.
+
+The multiphase CGM is manifestedi n hydro sims which show a mixture of cool and hot gas within a virial radius with a density profile that drops with distance from the galaxy.
+
+We consider the outer boundary of the CGM to be the virial radius, but there is no empirical reason to believe anything physically interesting happens at that boundary. 
+
+Kinematic complexity refers to the dynamics of motion present in the motion of the flows observed in the redshifting of particular wavelengths. H[I], which traces
+colder gas, might be red shifted only due to forward motion, while O[VI], which traces hotter gas, might be red and blue shifted due to turbulence. This has the effect
+of broadening the line in the spectrum. 
+
+\subsection{From Basic Observables to Physical Properties}
+
+Figure 6 gives a schema for constraining CGM gas properties with multiphase ions
+
+
+\section{The Baryonic Mass Distribution of the CGM}
+\subsection{The Missing Baryons Budget}
+
+The total baryon budget of sub-L* to super-L* galaxies is $10^{10} - 10^{12}$ M$_\odot$.
+
+Figure 8 shows the missing baryons in observations and simulations.
+
+\subsection{CGM Masses by Phase}
+
+\subsubsection{Cold gas, $T<10^4$ K}
+HI, NaI, CaII are cold gas tracers. Can be from gas that cooled due to thermal instability or may be part of multiphase outflow. Cold gas makes up less than 1\% of the baryons
+for a MW-like halo.
+
+ISM and CGM dust are at most 1 \% of the missing baryons.
+
+\subsubsection{UV absorption lines and the cool $10^{4-5}$ K CGM}
+
+There's a rich set of UV lines at these temperatures for objects at low redshift
+
+L* and super-L* galaxies provide the most reliable constraints given their ease of detection in surveys at $z < 0.5$. 
+
+\section{Questions to ask Brian}
+\begin{itemize}
+\item{Q: One section talks about how galaxies are quenching too soon, i.e. before they run out of cold gas. But the
+section before that talks about how the galaxies would run out of cold gas without an external source. These
+two points seem to contradict each other.}
+
+\item{A: In general, galaxies have a very short depletion time (sometimes around a billion years). Since these galaxies are
+all still around, it means that they must have some external source of cold gas. Certain galaxies will quench, (stop
+forming stars) before they run out of this extra cold gas. }
+
+\item{Q: The article doesn't explain what it means by $N$ and $n$ but these numbers are clearly two different
+    quantities. $N \sim 10^{16}$ while $n \sim 10^{-2}$. What do these quantities represent?}
+
+\item{A:  $N$ is number density integrated along a line-of-sight. $n$ is number density.}
+
+\item{Q: What are high-velocity clouds in the CGM and what is their significance?}
+
+\item{A:  Thermal instability around $10^5$ K causes gas around that temperature to cool very quickly until it reaches about $10^4$ K, while gas at much
+  higher temperatures stays at roughly the same temperature. This creates a thermal gap between cold gas (clouds) and hot gas streams that enclose them.
+  Within the interface between the two, we expect a huge variety of ion species due to the temperature gradient. }
+
+\item{Q: Any good fluid dynamics classes/books/papers I can learn from?}
+\item{A: Yes! You have the PDF}
+
+\item{Q: How does a simulation end up missing baryons? }
+\item{A: ``Missing'' is relative to universal baryon density $\Omega_b/\Omega_m$. Baryons are there, but the baryonic density is much lower than the universal density.
+  I'd expect it to be much higher. }
+
+\item{Q: What is the underlying physics that causes thermal instability?}
+  \item{A:}
+    
+\end{itemize}
+
+\end{document}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
